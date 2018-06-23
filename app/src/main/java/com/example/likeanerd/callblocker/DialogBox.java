@@ -31,6 +31,7 @@ public class DialogBox extends DialogFragment implements View.OnClickListener {
     @Override
 
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
+       
         View view = inflater.inflate(R.layout.dialog,null);
         no = (Button)view.findViewById(R.id.No);
         yes = (Button)view.findViewById(R.id.yes);
@@ -57,6 +58,8 @@ public class DialogBox extends DialogFragment implements View.OnClickListener {
 
 
     }
+    
+    //to communicate between fragments through main activity
     interface Communicator
     {
         public void number();
