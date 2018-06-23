@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">BAKA BLOCKER</string>
+    <string name="view_data">VIEW</string>
+    <string name="add">BLOCK</string>
+    <string name="unblock_number">Unblock Number?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+</resources>
