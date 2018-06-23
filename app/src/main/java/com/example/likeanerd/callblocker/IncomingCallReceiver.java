@@ -19,7 +19,9 @@ public class IncomingCallReceiver extends BroadcastReceiver {
         try {
             String state = intent.getStringExtra(TelephonyManager.EXTRA_STATE);
             String number = intent.getExtras().getString(TelephonyManager.EXTRA_INCOMING_NUMBER);
-
+            
+            
+            //checking whether incoming call is blocked 
             tdatabasehelper = new DatabaseHelper(context);
                 String flag =  tdatabasehelper.checkNumber(number);
 
@@ -34,7 +36,8 @@ public class IncomingCallReceiver extends BroadcastReceiver {
                     m.setAccessible(true);
                     telephonyService = (ITelephony) m.invoke(tm);
                     Toast.makeText(context,number ,Toast.LENGTH_LONG ).show();
-
+                                                
+                    //ends calls if incoming call number begins with 140 or if its in the blocked list
                     if (((number != null)&&(flag=="True"))||(number.substring(0,3).equals("140")||number.substring(0,6).equals("+91140"))) {
                         telephonyService.endCall();
                         Toast.makeText(context, "Ending the call from: " + number, Toast.LENGTH_SHORT).show();
