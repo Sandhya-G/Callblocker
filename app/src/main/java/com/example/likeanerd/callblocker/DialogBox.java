@@ -59,7 +59,7 @@ public class DialogBox extends DialogFragment implements View.OnClickListener {
 
     }
     
-    //to communicate between fragments through main activity
+    //to communicate between fragments
     interface Communicator
     {
         public void number();
