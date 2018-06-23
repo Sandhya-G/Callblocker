@@ -73,10 +73,6 @@ public class ListDataActivity extends AppCompatActivity implements DialogBox.Com
         });
     }
 
-    /**
-     * customizable toast
-     * @param message
-     */
     private void toastMessage(String message){
         Toast.makeText(this,message, Toast.LENGTH_SHORT).show();
     }
